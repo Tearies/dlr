@@ -15,7 +15,7 @@ namespace Microsoft.Scripting.Utils {
         public static Exception Unreachable {
             get {
                 Debug.Assert(false, "Unreachable");
-                return new InvalidOperationException("Code supposed to be unreachable");
+                return new InvalidOperationException(ResourceManager.Default.GetResource("Unreachable", "Code supposed to be unreachable"));
             }
         }
 
