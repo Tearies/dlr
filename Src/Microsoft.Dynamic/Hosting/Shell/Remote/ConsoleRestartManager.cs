@@ -90,7 +90,7 @@ namespace Microsoft.Scripting.Hosting.Shell.Remote {
             Debug.Assert(Thread.CurrentThread != _consoleThread);
 
             if (_consoleThread.IsAlive) {
-                throw new InvalidOperationException("Console thread is already running.");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("Consoleisrunning", "Console thread is already running."));
             }
             _consoleThread.Start();
         }

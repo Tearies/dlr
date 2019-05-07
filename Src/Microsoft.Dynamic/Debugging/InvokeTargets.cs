@@ -24,7 +24,7 @@ namespace Microsoft.Scripting.Debugging {
 #if FEATURE_REFEMIT
                 return DelegateHelpers.MakeNewCustomDelegateType(typeArgs);
 #else
-                throw new NotSupportedException("Signature not supported on this platform.");
+                throw new NotSupportedException(ResourceManager.Default.GetResource("SignatureNotSupported","Signature not supported on this platform."));
 #endif
             }
         }

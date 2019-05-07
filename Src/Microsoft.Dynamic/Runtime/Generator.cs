@@ -90,7 +90,7 @@ namespace Microsoft.Scripting.Runtime {
                 if (_state < _yieldMarkers.Length)
                     return _yieldMarkers[_state];
 
-                throw new InvalidOperationException("unknown yield marker");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("unknownyieldmarker", "unknown yield marker"));
             }
             set {
                 for (int i = 0; i < _yieldMarkers.Length; i++) {
@@ -100,7 +100,7 @@ namespace Microsoft.Scripting.Runtime {
                     }
                 }
 
-                throw new InvalidOperationException("unknown yield marker");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("unknownyieldmarker", "unknown yield marker"));
             }
         }
     }

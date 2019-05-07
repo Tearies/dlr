@@ -182,7 +182,7 @@ namespace Microsoft.Scripting.Interpreter {
             }
 
             if (!_closureVars.TryGetValue(variable, out LocalVariable loc)) {
-                throw new InvalidOperationException("unbound variable: " + variable.Name);
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("unboundvariable", "unbound variable: ") + variable.Name);
             }
 
             var result = loc.LoadFromArray(null, _closureArray);

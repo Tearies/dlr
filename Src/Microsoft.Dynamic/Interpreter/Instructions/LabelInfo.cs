@@ -75,7 +75,7 @@ namespace Microsoft.Scripting.Interpreter {
                 // Was just redefined, if we had any across block jumps, they're
                 // now invalid
                 if (_acrossBlockJump) {
-                    throw new InvalidOperationException("Ambiguous jump");                    
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("Ambiguousjump", "Ambiguous jump"));                    
                 }
                 // For local jumps, we need a new IL label
                 // This is okay because:
@@ -110,7 +110,7 @@ namespace Microsoft.Scripting.Interpreter {
             // Validate that we aren't jumping across a finally
             for (LabelScopeInfo j = reference; j != common; j = j.Parent) {
                 if (j.Kind == LabelScopeKind.Filter) {
-                    throw new InvalidOperationException("Control cannot leave filter test");
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("Controlcannotleavefilter", "Control cannot leave filter test"));
                 }
             }
 
@@ -118,10 +118,10 @@ namespace Microsoft.Scripting.Interpreter {
             for (LabelScopeInfo j = def; j != common; j = j.Parent) {
                 if (!j.CanJumpInto) {
                     if (j.Kind == LabelScopeKind.Expression) {
-                        throw new InvalidOperationException("Control cannot enter an expression");
+                        throw new InvalidOperationException(ResourceManager.Default.GetResource("Controlcannotenterexpression", "Control cannot enter an expression"));
                     }
 
-                    throw new InvalidOperationException("Control cannot enter try");
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("Controlcannotentertry", "Control cannot enter try"));
                 }
             }
         }
@@ -129,7 +129,7 @@ namespace Microsoft.Scripting.Interpreter {
         internal void ValidateFinish() {
             // Make sure that if this label was jumped to, it is also defined
             if (_references.Count > 0 && !HasDefinitions) {
-                throw new InvalidOperationException("label target undefined");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("labeltargetundefined", "label target undefined"));
             }
         }
 

@@ -15,7 +15,7 @@ namespace Microsoft.Scripting.Utils {
         }
 
         public static ArgumentNullException MakeArgumentItemNullException(int index, string arrayName) {
-            return new ArgumentNullException($"{arrayName}[{index}]");
+            return new ArgumentNullException(ResourceManager.Default.GetResource("MakeArgumentItemNullException", $"{arrayName}[{index}]"));
         }
 
 #if FEATURE_REMOTING

@@ -107,7 +107,7 @@ namespace Microsoft.Scripting.Actions {
         /// </summary>
         public DynamicMetaObject GetMetaObject(params DynamicMetaObject[] types) {
             if (_body == null) {
-                throw new InvalidOperationException("FinishCondition should have been called");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("FinishConditionNotCalled", "FinishCondition should have been called"));
             }
 
             if (_isError) {

@@ -192,7 +192,7 @@ namespace Microsoft.Scripting.Actions {
                     if (hl == null) {
                         hl = new ComHandlerList();
                         if (!Marshal.SetComObjectData(instance, this, hl)) {
-                            throw new COMException("Failed to set COM Object Data");
+                            throw new COMException(ResourceManager.Default.GetResource("FailedtosetCOMObjectData", "Failed to set COM Object Data"));
                         }
                     }
                 }

@@ -38,7 +38,7 @@ namespace Microsoft.Scripting.Utils {
                         }
                     }
 
-                    if (pubValue.Exception != null) throw new Exception("Error", pubValue.Exception);
+                    if (pubValue.Exception != null) throw new Exception(ResourceManager.Default.GetResource("Error", "Error"), pubValue.Exception);
 
                     return pubValue.Value;
                 }

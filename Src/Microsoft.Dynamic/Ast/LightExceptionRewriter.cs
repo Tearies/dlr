@@ -339,7 +339,7 @@ namespace Microsoft.Scripting.Ast {
                 );
 
                 if (handlers[i].Filter != null) {
-                    throw new NotSupportedException("filters for light exceptions");
+                    throw new NotSupportedException(ResourceManager.Default.GetResource("filtersforlightexceptions", "filters for light exceptions"));
                     // we could do this but the emulation wouldn't be perfect when filters
                     // run in relation to finallys
                     //test = Expression.AndAlso(test, handlers[i].Filter);

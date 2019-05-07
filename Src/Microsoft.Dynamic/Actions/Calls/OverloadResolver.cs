@@ -118,7 +118,7 @@ namespace Microsoft.Scripting.Actions.Calls {
             ContractUtils.Requires(minLevel <= maxLevel);
 
             if (_candidateSets != null) {
-                throw new InvalidOperationException("Overload resolver cannot be reused.");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("OverloadResolverIsUsed", "Overload resolver cannot be reused."));
             }
 
             _methodName = methodName;
@@ -315,7 +315,7 @@ namespace Microsoft.Scripting.Actions.Calls {
 
         public ActualArguments GetActualArguments() {
             if (_actualArguments == null) {
-                throw new InvalidOperationException("Actual arguments have not been built yet.");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("ActualArgumentsIsNull", "Actual arguments have not been built yet."));
             }
             return _actualArguments; 
         }

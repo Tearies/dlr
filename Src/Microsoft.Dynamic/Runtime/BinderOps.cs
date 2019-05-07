@@ -28,7 +28,7 @@ namespace Microsoft.Scripting.Runtime {
             if (listArgs == null) {
                 IEnumerable ie = additionalArgs as IEnumerable;
                 if (ie == null) {
-                    throw new InvalidOperationException("args must be iterable");
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("argsmustbeiterable", "args must be iterable"));
                 }
                 listArgs = new List<object>();
                 foreach (object o in ie) {
@@ -225,11 +225,12 @@ namespace Microsoft.Scripting.Runtime {
             }
 
             BoundMemberTracker bmt = value as BoundMemberTracker;
-            if (bmt == null) throw new ArgumentTypeException("expected bound event, got " + CompilerHelpers.GetType(value).Name);
-            if (bmt.BoundTo.MemberType != TrackerTypes.Event) throw new ArgumentTypeException("expected bound event, got " + bmt.BoundTo.MemberType.ToString());
+            if (bmt == null) throw new ArgumentTypeException(ResourceManager.Default.GetResource("expectedboundevent", "expected bound event, got ") + CompilerHelpers.GetType(value).Name);
+            if (bmt.BoundTo.MemberType != TrackerTypes.Event) throw new ArgumentTypeException(ResourceManager.Default.GetResource("expectedboundevent", "expected bound event, got ") + bmt.BoundTo.MemberType.ToString());
 
             if (bmt.BoundTo != eventTracker) throw new ArgumentException(
-                $"expected event from {eventTracker.DeclaringType.Name}.{eventTracker.Name}, got event from {bmt.BoundTo.DeclaringType.Name}.{bmt.BoundTo.Name}");
+                string.Format(ResourceManager.Default.GetResource("bmtBoundToNotEQeventTracker", "expected event from {0}.{1}, got event from {2}.{3}"), eventTracker.DeclaringType.Name,
+                    eventTracker.Name, bmt.BoundTo.DeclaringType.Name, bmt.BoundTo.Name));
         }
     }
 }

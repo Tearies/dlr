@@ -64,7 +64,7 @@ namespace Microsoft.Scripting.Generation {
 
             return Snippets.Shared.DefineDelegate("Delegate" + types.Length, returnType, parameters);
 #else
-            throw new NotSupportedException("Signature not supported on this platform");
+            throw new NotSupportedException(ResourceManager.Default.GetResource("SignatureNotSupported","Signature not supported on this platform."));
 #endif
         }
     }

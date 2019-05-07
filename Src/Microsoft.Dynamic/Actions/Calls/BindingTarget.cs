@@ -84,11 +84,11 @@ namespace Microsoft.Scripting.Actions.Calls {
         /// </summary>
         public Expression MakeExpression() {
             if (MethodCandidate == null) {
-                throw new InvalidOperationException("An expression cannot be produced because the method binding was unsuccessful.");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("MethodCandidateIsNull", "An expression cannot be produced because the method binding was unsuccessful."));
             }
 
             if (RestrictedArguments == null) {
-                throw new InvalidOperationException("An expression cannot be produced because the method binding was done with Expressions, not MetaObject's");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("RestrictedArgumentsIsNull", "An expression cannot be produced because the method binding was done with Expressions, not MetaObject's"));
             }
 
             return MethodCandidate.MakeExpression(RestrictedArguments);

@@ -67,7 +67,7 @@ namespace Microsoft.Scripting.Hosting.Shell.Remote {
                 return false;
             }
 
-            executingThread.Abort(new KeyboardInterruptException(""));
+            executingThread.Abort(new KeyboardInterruptException(ResourceManager.Default.GetResource("", "")));
             return true;
         }
 

@@ -188,7 +188,7 @@ namespace Microsoft.Scripting.Ast {
 
             if (node.Type != typeof(void)) {
                 // This is not hard to support in principle, but not needed by anyone yet.
-                throw new NotSupportedException("FinallyFlowControlExpression does not support TryExpressions of non-void type.");
+                throw new NotSupportedException(ResourceManager.Default.GetResource("TryExpressionsNonVoidTypeNotSupportFinallyFlowControlExpression", "FinallyFlowControlExpression does not support TryExpressions of non-void type."));
             }
 
             //  If there is a control flow in finally, emit outer:

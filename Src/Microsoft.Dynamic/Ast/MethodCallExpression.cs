@@ -203,7 +203,7 @@ namespace Microsoft.Scripting.Ast {
             if (parameter.HasDefaultValue()) {
                 return AstUtils.Constant(parameter.GetDefaultValue(), parameter.ParameterType);
             } else {
-                throw new NotSupportedException("missing parameter value not supported");
+                throw new NotSupportedException(ResourceManager.Default.GetResource("missingparametervaluenotsupporte", "missing parameter value not supported"));
             }
         }
 

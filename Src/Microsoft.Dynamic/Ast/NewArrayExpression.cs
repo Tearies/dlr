@@ -16,7 +16,7 @@ namespace Microsoft.Scripting.Ast {
             ContractUtils.RequiresNotNull(initializers, nameof(initializers));
 
             if (type.Equals(typeof(void))) {
-                throw new ArgumentException("Argument type cannot be System.Void.");
+                throw new ArgumentException(ResourceManager.Default.GetResource("ArgumentNotBetVoid", "Argument type cannot be System.Void."));
             }
 
             ReadOnlyCollection<Expression> initializerList = initializers.ToReadOnly();

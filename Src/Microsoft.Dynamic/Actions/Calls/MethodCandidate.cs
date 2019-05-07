@@ -263,7 +263,7 @@ namespace Microsoft.Scripting.Actions.Calls {
 
             // TODO: make MakeExpression virtual on OverloadInfo?
             if (mb == null) {
-                throw new InvalidOperationException("Cannot generate an expression for an overload w/o MethodBase");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("OverloadReflectionInfoIsNull", "Cannot generate an expression for an overload w/o MethodBase"));
             }
 
             MethodInfo mi = mb as MethodInfo;

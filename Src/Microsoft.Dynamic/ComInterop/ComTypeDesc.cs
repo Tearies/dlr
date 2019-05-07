@@ -45,7 +45,7 @@ namespace Microsoft.Scripting.ComInterop {
                     ComTypeDesc typeDesc = new ComTypeDesc(typeInfo, ComType.Interface, null);
                     return typeDesc;
                 default:
-                    throw new InvalidOperationException("Attempting to wrap an unsupported enum type.");
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("Attemptingtowrapanunsupportedenum", "Attempting to wrap an unsupported enum type."));
             }
         }
 

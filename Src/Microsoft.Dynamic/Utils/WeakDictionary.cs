@@ -298,7 +298,7 @@ namespace Microsoft.Scripting.Utils {
 
         public HybridMapping(int offset) {
             if (offset < 0 || (SIZE - offset) < MIN_RANGE) {
-                throw new InvalidOperationException("HybridMapping is full");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("HybridMappingFull", "HybridMapping is full"));
             }
             _offset = offset;
             _current = offset;
@@ -316,7 +316,7 @@ namespace Microsoft.Scripting.Utils {
                 while (_dict.ContainsKey(_current)) {
                     NextKey();
                     if (_current == saved)
-                        throw new InvalidOperationException("HybridMapping is full");
+                        throw new InvalidOperationException(ResourceManager.Default.GetResource("HybridMappingFull", "HybridMapping is full"));
                 }
                 _dict.Add(_current, new WeakObject(value));
                 return _current;
@@ -325,7 +325,7 @@ namespace Microsoft.Scripting.Utils {
 
         public int StrongAdd(T value, int pos) {
             if (pos >= SIZE) {
-                throw new InvalidOperationException("Size of HybridMapping Exceeded (" + SIZE + ")");
+                throw new InvalidOperationException(string.Format(ResourceManager.Default.GetResource("HybridMappingExceededSize", "Size of HybridMapping Exceeded ({0})"),SIZE));
             }
             lock (_synchObject) {
                 if (pos == -1) {
@@ -333,13 +333,13 @@ namespace Microsoft.Scripting.Utils {
                     while (_dict.ContainsKey(_current)) {
                         NextKey();
                         if (_current == saved)
-                            throw new InvalidOperationException("HybridMapping is full");
+                            throw new InvalidOperationException(ResourceManager.Default.GetResource("HybridMappingFull", "HybridMapping is full"));
                     }
                     _dict.Add(_current, value);
                     return _current;
                 }
                 if (_dict.ContainsKey(pos)) {
-                    throw new InvalidOperationException("HybridMapping at pos:" + pos + " is not empty");
+                    throw new InvalidOperationException(string.Format(ResourceManager.Default.GetResource("HybridMappingElementsEmpty", "HybridMapping at pos:{0} is not empty"),pos));
                 }
                 _dict.Add(pos, value);
                 return pos;
@@ -355,7 +355,7 @@ namespace Microsoft.Scripting.Utils {
                     return variable;
                 }
 
-                throw new InvalidOperationException("Unexpected dictionary content: type " + ret.GetType());
+                throw new InvalidOperationException(string.Format(ResourceManager.Default.GetResource("Unexpecteddictionarycontent", "Unexpected dictionary content: type {0}") , ret.GetType()));
             }
 
             return default(T);

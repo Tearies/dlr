@@ -106,7 +106,7 @@ namespace Microsoft.Scripting.Hosting.Shell {
                 }
             }
 
-            throw new InvalidOptionException("No language specified.");
+            throw new InvalidOptionException(ResourceManager.Default.GetResource("Nolanguagespecified", "No language specified."));
         }
 
         protected virtual CommandLine CreateCommandLine() {

@@ -1519,7 +1519,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (Byte)(Int64)o;
                 case TypeCode.UInt64: return (Byte)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static SByte ExplicitCastEnumToSByte(object o) {
@@ -1534,7 +1534,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (SByte)(Int64)o;
                 case TypeCode.UInt64: return (SByte)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static Int16 ExplicitCastEnumToInt16(object o) {
@@ -1549,7 +1549,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (Int16)(Int64)o;
                 case TypeCode.UInt64: return (Int16)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static UInt16 ExplicitCastEnumToUInt16(object o) {
@@ -1564,7 +1564,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (UInt16)(Int64)o;
                 case TypeCode.UInt64: return (UInt16)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static Int32 ExplicitCastEnumToInt32(object o) {
@@ -1579,7 +1579,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (Int32)(Int64)o;
                 case TypeCode.UInt64: return (Int32)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static UInt32 ExplicitCastEnumToUInt32(object o) {
@@ -1594,7 +1594,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (UInt32)(Int64)o;
                 case TypeCode.UInt64: return (UInt32)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static Int64 ExplicitCastEnumToInt64(object o) {
@@ -1609,7 +1609,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (Int64)(Int64)o;
                 case TypeCode.UInt64: return (Int64)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
         internal static UInt64 ExplicitCastEnumToUInt64(object o) {
@@ -1624,7 +1624,7 @@ namespace Microsoft.Scripting.Runtime {
                 case TypeCode.Int64: return (UInt64)(Int64)o;
                 case TypeCode.UInt64: return (UInt64)(UInt64)o;
             }
-            throw new InvalidOperationException("Invalid enum");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidenum", "Invalid enum"));
         }
 
 

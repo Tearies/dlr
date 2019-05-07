@@ -80,7 +80,7 @@ namespace Microsoft.Scripting.Hosting.Shell.Remote {
             _remoteOutputReceived.WaitOne();
 
             if (process.HasExited) {
-                throw new RemoteRuntimeStartupException("Remote runtime terminated during startup with exitcode " + process.ExitCode);
+                throw new RemoteRuntimeStartupException(ResourceManager.Default.GetResource("Remoteruntimeterminated", "Remote runtime terminated during startup with exitcode ") + process.ExitCode);
             }
         }
 

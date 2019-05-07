@@ -268,7 +268,7 @@ namespace Microsoft.Scripting.Interpreter {
                 return _locals.AddClosureVariable(expr);
             }
 
-            throw new InvalidOperationException("unbound variable: " + expr);
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("unboundvariable", "unbound variable: ") + expr);
         }
 
         private void EnsureVariable(ParameterExpression variable) {
@@ -502,7 +502,7 @@ namespace Microsoft.Scripting.Interpreter {
                     CompileVariableAssignment(node, asVoid); 
                     break;
                 default:
-                    throw new InvalidOperationException("Invalid lvalue for assignment: " + node.Left.NodeType);
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("Invalidlvalueforassignment", "Invalid lvalue for assignment: ") + node.Left.NodeType);
             }
         }
 

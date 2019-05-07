@@ -310,7 +310,7 @@ namespace Microsoft.Scripting.Ast {
             if (fault != null && finallyYields != catchYields) {
                 // No one needs this yet, and it's not clear how we should get back to
                 // the fault
-                throw new NotSupportedException("yield in fault block is not supported");
+                throw new NotSupportedException(ResourceManager.Default.GetResource("yieldinfaultnotsupported", "yield in fault block is not supported"));
             }
 
             // If try has yields, we need to build a new try body that
@@ -504,7 +504,7 @@ namespace Microsoft.Scripting.Ast {
             Expression f = Visit(node.Filter);
             if (yields != _yields.Count) {
                 // No one needs this yet, and it's not clear what it should even do
-                throw new NotSupportedException("yield in filter is not allowed");
+                throw new NotSupportedException(ResourceManager.Default.GetResource("yieldinfilterisnotallowed", "yield in filter is not allowed"));
             }
             Expression b = Visit(node.Body);
             if (v == node.Variable && b == node.Body && f == node.Filter) {
@@ -543,7 +543,7 @@ namespace Microsoft.Scripting.Ast {
 
         private Expression VisitYield(YieldExpression node) {
             if (node.Target != _generator.Target) {
-                throw new InvalidOperationException("yield and generator must have the same LabelTarget object");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("yieldandgeneratornotsameLabelTargetobject", "yield and generator must have the same LabelTarget object"));
             }
 
             var value = Visit(node.Value);

@@ -340,7 +340,7 @@ namespace Microsoft.Scripting.Ast {
             bool lambdaHasParamarray = ParamsArray != null;
 
             if (lambdaHasParamarray && !delegateHasParamarray) {
-                throw new ArgumentException("paramarray lambdas must have paramarray delegate type");
+                throw new ArgumentException(ResourceManager.Default.GetResource("paramarraylambdasdonthavedelegatetype", "paramarray lambdas must have paramarray delegate type"));
             }
 
             int copy = delegateHasParamarray ? delegateParams.Length - 1 : delegateParams.Length;
@@ -349,7 +349,7 @@ namespace Microsoft.Scripting.Ast {
 
             // Lambda must have at least as many parameters as the delegate, not counting the paramarray
             if (unwrap < 0) {
-                throw new ArgumentException("lambda does not have enough parameters");
+                throw new ArgumentException(ResourceManager.Default.GetResource("lambdaparametersNotenough", "lambda does not have enough parameters"));
             }
 
             // shortcircuit if no rewrite is needed.
@@ -476,21 +476,21 @@ namespace Microsoft.Scripting.Ast {
         /// </summary>
         private void Validate() {
             if (_completed) {
-                throw new InvalidOperationException("The builder is closed");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("BuilderClosed", "The builder is closed"));
             }
             if (_returnType == null) {
-                throw new InvalidOperationException("Return type is missing");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("Returntypemissing", "Return type is missing"));
             }
             if (_name == null) {
-                throw new InvalidOperationException("Name is missing");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("NameisMissing","Name is missing"));
             }
             if (_body == null) {
-                throw new InvalidOperationException("Body is missing");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("Bodyismissing", "Body is missing"));
             }
 
             if (ParamsArray != null &&
                 (_params.Count == 0 || _params[_params.Count -1] != ParamsArray)) {
-                throw new InvalidOperationException("The params array parameter is not last in the parameter list");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("paramsparametermustbelast", "The params array parameter is not last in the parameter list"));
             }
         }
 
