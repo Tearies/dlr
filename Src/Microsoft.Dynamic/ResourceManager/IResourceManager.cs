@@ -28,6 +28,7 @@ namespace Microsoft.Scripting
         /// 初始化App的名称
         /// </summary>
         /// <param name="appName"></param>
-        void Initialize(string appName);
+        /// <param name="languageid"></param>
+        void Initialize(string appName, CultureInfo languageid = null);
     }
 }
