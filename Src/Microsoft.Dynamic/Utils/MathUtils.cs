@@ -564,7 +564,7 @@ namespace Microsoft.Scripting.Utils {
 
         internal static string BigIntegerToString(uint[] d, int sign, int radix, bool lowerCase) {
             if (radix < 2 || radix > 36) {
-                throw ExceptionUtils.MakeArgumentOutOfRangeException(nameof(radix), radix, "radix must be between 2 and 36");
+                throw ExceptionUtils.MakeArgumentOutOfRangeException(nameof(radix), radix, ResourceManager.Default.GetResource("radixmustbebetween2and36", "radix must be between 2 and 36"));
             }
 
             int dl = d.Length;
@@ -926,7 +926,7 @@ namespace Microsoft.Scripting.Utils {
 
         public static BigInteger Power(this BigInteger self, long exp) {
             if (exp < 0) {
-                throw ExceptionUtils.MakeArgumentOutOfRangeException(nameof(exp), exp, "Must be at least 0");
+                throw ExceptionUtils.MakeArgumentOutOfRangeException(nameof(exp), exp, ResourceManager.Default.GetResource("Mustbeatleast0", "Must be at least 0"));
             }
 
             // redirection possible?
@@ -975,7 +975,7 @@ namespace Microsoft.Scripting.Utils {
             const string symbols = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
             if (radix < 2 || radix > 36) {
-                throw ExceptionUtils.MakeArgumentOutOfRangeException(nameof(radix), radix, "radix must be between 2 and 36");
+                throw ExceptionUtils.MakeArgumentOutOfRangeException(nameof(radix), radix, ResourceManager.Default.GetResource("radixmustbebetween2and36", "radix must be between 2 and 36"));
             }
 
             bool isNegative = false;
