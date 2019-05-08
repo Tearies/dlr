@@ -321,7 +321,7 @@ namespace Microsoft.Scripting {
             // function here which allows setting of the value to an empty string.
             // This will require high trust and will fail in sandboxed environments
             if (!NativeMethods.SetEnvironmentVariable(key, String.Empty)) {
-                throw new ExternalException("SetEnvironmentVariable failed", Marshal.GetLastWin32Error());
+                throw new ExternalException(ResourceManager.Default.GetResource("SetEnvironmentVariablefailed", "SetEnvironmentVariable failed"), Marshal.GetLastWin32Error());
             }
         }
 #endif

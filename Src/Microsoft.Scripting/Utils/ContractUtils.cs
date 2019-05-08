@@ -120,7 +120,7 @@ namespace Microsoft.Scripting.Utils {
         }
 
         public static Exception Unreachable {
-            get { return new InvalidOperationException("Unreachable"); }
+            get { return new InvalidOperationException(ResourceManager.Default.GetResource("Unreachable", "Unreachable")); }
         }
     }
 }

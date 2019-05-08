@@ -55,7 +55,7 @@ namespace Microsoft.Scripting.Metadata {
 
             if (nextRid >= m_endRid) {
                 if (m_tables == null) {
-                    throw new ObjectDisposedException("MetadataTableEnumerator");
+                    throw new ObjectDisposedException(ResourceManager.Default.GetResource("MetadataTableEnumerator", "MetadataTableEnumerator"));
                 }
                 return false;
             }

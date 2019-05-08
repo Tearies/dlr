@@ -26,7 +26,7 @@ namespace Microsoft.Scripting.Metadata {
             [SecurityCritical]
             get {
                 if (_pointer == null) {
-                    throw new ObjectDisposedException("MemoryMapping");
+                    throw new ObjectDisposedException(ResourceManager.Default.GetResource("MemoryMapping", "MemoryMapping"));
                 }
                 return _pointer;
             }
@@ -38,7 +38,7 @@ namespace Microsoft.Scripting.Metadata {
 
         public MemoryBlock GetRange(int start, int length) {
             if (_pointer == null) {
-                throw new ObjectDisposedException("MemoryMapping");
+                throw new ObjectDisposedException(ResourceManager.Default.GetResource("MemoryMapping", "MemoryMapping"));
             }
             if (start < 0) {
                 throw new ArgumentOutOfRangeException(nameof(start));
@@ -75,7 +75,7 @@ namespace Microsoft.Scripting.Metadata {
                     handle = accessor.SafeMemoryMappedViewHandle;
                     handle.AcquirePointer(ref ptr);
                     if (ptr == null) {
-                        throw new IOException("Cannot create a file mapping");
+                        throw new IOException(ResourceManager.Default.GetResource("Cannotcreateafilemapping", "Cannot create a file mapping"));
                     }
                     mapping._handle = handle;
                     mapping._pointer = ptr;

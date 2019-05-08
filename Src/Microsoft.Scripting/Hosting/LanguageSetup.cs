@@ -164,7 +164,7 @@ namespace Microsoft.Scripting.Hosting {
 
         private void CheckFrozen() {
             if (_frozen) {
-                throw new InvalidOperationException("Cannot modify LanguageSetup after it has been used to create a ScriptRuntime");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("CannotmodifyLanguageSetup", "Cannot modify LanguageSetup after it has been used to create a ScriptRuntime"));
             }
         }        
     }

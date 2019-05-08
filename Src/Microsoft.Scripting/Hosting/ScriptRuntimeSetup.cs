@@ -142,7 +142,7 @@ namespace Microsoft.Scripting.Hosting {
 
         private void CheckFrozen() {
             if (_frozen) {
-                throw new InvalidOperationException("Cannot modify ScriptRuntimeSetup after it has been used to create a ScriptRuntime");
+                throw new InvalidOperationException(ResourceManager.Default.GetResource("CannotmodifyScriptRuntimeSetup", "Cannot modify ScriptRuntimeSetup after it has been used to create a ScriptRuntime"));
             }            
         }
         

@@ -44,7 +44,7 @@ namespace Microsoft.Scripting.Hosting {
         public ScriptRuntime Runtime {
             get {
                 if (_runtime == null) {
-                    throw new InvalidOperationException("Host not initialized");
+                    throw new InvalidOperationException(ResourceManager.Default.GetResource("Hostnotinitialized", "Host not initialized"));
                 }
                 return _runtime;
             }

@@ -358,7 +358,7 @@ namespace Microsoft.Scripting.Hosting {
             ContractUtils.RequiresNotNull(path, nameof(path));
             ContractUtils.RequiresNotNull(encoding, nameof(encoding));
             ContractUtils.Requires(kind.IsValid(), nameof(kind));
-            if (!LanguageContext.CanCreateSourceCode) throw new NotSupportedException("Invariant engine cannot create scripts");
+            if (!LanguageContext.CanCreateSourceCode) throw new NotSupportedException(ResourceManager.Default.GetResource("Invariantenginecannotcreatescripts", "Invariant engine cannot create scripts"));
 
             return new ScriptSource(this, LanguageContext.CreateFileUnit(path, encoding, kind));
         }
@@ -434,7 +434,7 @@ namespace Microsoft.Scripting.Hosting {
         /// </summary>
         public ScriptSource CreateScriptSource(CodeObject content, string path, SourceCodeKind kind) {
             ContractUtils.RequiresNotNull(content, nameof(content));
-            if (!LanguageContext.CanCreateSourceCode) throw new NotSupportedException("Invariant engine cannot create scripts");
+            if (!LanguageContext.CanCreateSourceCode) throw new NotSupportedException(ResourceManager.Default.GetResource("Invariantenginecannotcreatescripts", "Invariant engine cannot create scripts"));
 
             return new ScriptSource(this, LanguageContext.GenerateSourceCode(content, path, kind));
         }
@@ -486,7 +486,7 @@ namespace Microsoft.Scripting.Hosting {
         public ScriptSource CreateScriptSource(TextContentProvider contentProvider, string path, SourceCodeKind kind) {
             ContractUtils.RequiresNotNull(contentProvider, nameof(contentProvider));
             ContractUtils.Requires(kind.IsValid(), nameof(kind));
-            if (!LanguageContext.CanCreateSourceCode) throw new NotSupportedException("Invariant engine cannot create scripts");
+            if (!LanguageContext.CanCreateSourceCode) throw new NotSupportedException(ResourceManager.Default.GetResource("Invariantenginecannotcreatescripts", "Invariant engine cannot create scripts"));
 
             return new ScriptSource(this, LanguageContext.CreateSourceUnit(contentProvider, path, kind));
         }

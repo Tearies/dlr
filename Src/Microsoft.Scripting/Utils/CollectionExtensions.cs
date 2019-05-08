@@ -60,7 +60,7 @@ namespace Microsoft.Scripting.Utils {
 
         internal static TSource Aggregate<TSource>(this IEnumerable<TSource> source, Func<TSource, TSource, TSource> func) {
             using (IEnumerator<TSource> e = source.GetEnumerator()) {
-                if (!e.MoveNext()) throw new ArgumentException("Collection is empty", nameof(source));
+                if (!e.MoveNext()) throw new ArgumentException(ResourceManager.Default.GetResource("Collectionisempty", "Collection is empty"), nameof(source));
                 TSource result = e.Current;
                 while (e.MoveNext()) result = func(result, e.Current);
                 return result;

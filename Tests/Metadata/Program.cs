@@ -15,6 +15,7 @@ using Microsoft.Scripting.Metadata;
 using System.Security;
 using System.Security.Policy;
 using System.Security.Permissions;
+using Microsoft.Scripting;
 
 namespace Metadata {
     public static class Program {
@@ -203,7 +204,7 @@ namespace Metadata {
                     return $"spec({SignatureToString(typeSpec.Signature)})";
             }
 
-            throw new InvalidOperationException("Unknown type token");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Unknowntypetoken", "Unknown type token"));
         }
 
         private static string MethodToString(MetadataRecord record) {
@@ -227,7 +228,7 @@ namespace Metadata {
                     return $"spec({SignatureToString(methodSpec.Signature)})";
             }
 
-            throw new InvalidOperationException("Unknown method token");
+            throw new InvalidOperationException(ResourceManager.Default.GetResource("Unknownmethodtoken", "Unknown method token"));
         }
 
         private static string DefaultValueToString(object value) {

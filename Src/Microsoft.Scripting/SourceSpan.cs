@@ -25,11 +25,11 @@ namespace Microsoft.Scripting {
         private static void ValidateLocations(SourceLocation start, SourceLocation end) {
             if (start.IsValid && end.IsValid) {
                 if (start > end) {
-                    throw new ArgumentException("Start and End must be well ordered");
+                    throw new ArgumentException(ResourceManager.Default.GetResource("StartandEndmustbewellordered", "Start and End must be well ordered"));
                 }
             } else {
                 if (start.IsValid || end.IsValid) {
-                    throw new ArgumentException("Start and End must both be valid or both invalid");
+                    throw new ArgumentException(ResourceManager.Default.GetResource("StartandEndmustbothbevalidorbothinvalid", "Start and End must both be valid or both invalid"));
                 }
             }
         }

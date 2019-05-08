@@ -34,7 +34,7 @@ namespace Microsoft.Scripting {
             if (GetScopeVariable(name, ignoreCase).TryGetValue(out object res)) {
                 return res;
             }
-            throw new KeyNotFoundException("no value");
+            throw new KeyNotFoundException(ResourceManager.Default.GetResource("NoValue", "no value"));
         }
 
         /// <summary>
