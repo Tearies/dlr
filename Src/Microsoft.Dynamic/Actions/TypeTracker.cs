@@ -51,7 +51,7 @@ namespace Microsoft.Scripting.Actions {
         public static explicit operator Type(TypeTracker tracker) {
             if (tracker is TypeGroup tg) {
                 if (!tg.TryGetNonGenericType(out Type res)) {
-                    throw ScriptingRuntimeHelpers.SimpleTypeError("expected non-generic type, got generic-only type");
+                    throw ScriptingRuntimeHelpers.SimpleTypeError(ResourceManager.Default.GetResource("expectednongenerictypegotgenericonlytype", "expected non-generic type, got generic-only type"));
                 }
                 return res;
             }

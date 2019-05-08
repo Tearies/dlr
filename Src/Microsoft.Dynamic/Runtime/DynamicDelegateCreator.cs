@@ -51,7 +51,7 @@ namespace Microsoft.Scripting.Runtime {
                 MethodInfo invoke;
 
                 if (!typeof(Delegate).IsAssignableFrom(delegateType) || (invoke = delegateType.GetMethod("Invoke")) == null) {
-                    throw ScriptingRuntimeHelpers.SimpleTypeError("A specific delegate type is required.");
+                    throw ScriptingRuntimeHelpers.SimpleTypeError(ResourceManager.Default.GetResource("Aspecificdelegatetypeisrequired", "A specific delegate type is required."));
                 }
 
                 result = GetOrCreateDelegateForDynamicObject(callableObject, delegateType, invoke);
@@ -60,7 +60,7 @@ namespace Microsoft.Scripting.Runtime {
                 }
             }
 
-            throw ScriptingRuntimeHelpers.SimpleTypeError("Object is not callable.");
+            throw ScriptingRuntimeHelpers.SimpleTypeError(ResourceManager.Default.GetResource("Objectisnotcallable", "Object is not callable."));
         }
 
 #if FEATURE_LCG
