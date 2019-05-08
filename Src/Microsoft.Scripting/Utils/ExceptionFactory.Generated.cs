@@ -26,28 +26,28 @@ namespace Microsoft.Scripting {
         /// A string like  "Cannot access member {1} declared on type {0} because the type contains generic parameters."
         /// </summary>
         internal static string InvalidOperation_ContainsGenericParameters(object p0, object p1) {
-            return FormatString("Cannot access member {1} declared on type {0} because the type contains generic parameters.", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("InvalidOperation_ContainsGenericParameters", "Cannot access member {1} declared on type {0} because the type contains generic parameters."), p0, p1);
         }
 
         /// <summary>
         /// A string like  "Type '{0}' is missing or cannot be loaded."
         /// </summary>
         internal static string MissingType(object p0) {
-            return FormatString("Type '{0}' is missing or cannot be loaded.", p0);
+            return FormatString(ResourceManager.Default.GetResource("MissingType", "Type '{0}' is missing or cannot be loaded."), p0);
         }
 
         /// <summary>
         /// A string like  "static property "{0}" of "{1}" can only be read through a type, not an instance"
         /// </summary>
         internal static string StaticAccessFromInstanceError(object p0, object p1) {
-            return FormatString("static property \"{0}\" of \"{1}\" can only be read through a type, not an instance", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("StaticAccessFromInstanceError", "static property \"{0}\" of \"{1}\" can only be read through a type, not an instance"), p0, p1);
         }
 
         /// <summary>
         /// A string like  "static property "{0}" of "{1}" can only be assigned to through a type, not an instance"
         /// </summary>
         internal static string StaticAssignmentFromInstanceError(object p0, object p1) {
-            return FormatString("static property \"{0}\" of \"{1}\" can only be assigned to through a type, not an instance", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("StaticAssignmentFromInstanceError", "static property \"{0}\" of \"{1}\" can only be assigned to through a type, not an instance"), p0, p1);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MethodPreconditionViolated {
             get {
-                return "Method precondition violated";
+                return ResourceManager.Default.GetResource("MethodPreconditionViolated", "Method precondition violated");
             }
         }
 
@@ -64,7 +64,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string InvalidArgumentValue {
             get {
-                return "Invalid argument value";
+                return ResourceManager.Default.GetResource("InvalidArgumentValue","Invalid argument value");
             }
         }
 
@@ -73,7 +73,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string NonEmptyStringRequired {
             get {
-                return "Non-empty string required";
+                return ResourceManager.Default.GetResource("NonEmptyStringRequired", "Non-empty string required");
             }
         }
 
@@ -82,7 +82,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string NonEmptyCollectionRequired {
             get {
-                return "Non-empty collection required";
+                return ResourceManager.Default.GetResource("NonEmptyCollectionRequired", "Non-empty collection required");
             }
         }
 
@@ -91,7 +91,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MustBeExceptionInstance {
             get {
-                return "must by an Exception instance";
+                return ResourceManager.Default.GetResource("MustBeExceptionInstance", "must by an Exception instance");
             }
         }
 
@@ -100,7 +100,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string TypeOfTestMustBeBool {
             get {
-                return "Type of test must be bool";
+                return ResourceManager.Default.GetResource("TypeOfTestMustBeBool", "Type of test must be bool");
             }
         }
 
@@ -109,7 +109,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string TypeOfExpressionMustBeBool {
             get {
-                return "Type of the expression must be bool";
+                return ResourceManager.Default.GetResource("TypeOfExpressionMustBeBool", "Type of the expression must be bool");
             }
         }
 
@@ -118,7 +118,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string EmptyStringIsInvalidPath {
             get {
-                return "Empty string is not a valid path.";
+                return ResourceManager.Default.GetResource("EmptyStringIsInvalidPath", "Empty string is not a valid path.");
             }
         }
 
@@ -127,7 +127,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string InvalidDelegate {
             get {
-                return "Invalid delegate type (Invoke method not found).";
+                return ResourceManager.Default.GetResource("InvalidDelegate", "Invalid delegate type (Invoke method not found).");
             }
         }
 
@@ -136,7 +136,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string ExpectedStaticProperty {
             get {
-                return "expected only static property";
+                return ResourceManager.Default.GetResource("ExpectedStaticProperty", "expected only static property");
             }
         }
 
@@ -145,7 +145,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string PropertyDoesNotExist {
             get {
-                return "Property doesn't exist on the provided type";
+                return ResourceManager.Default.GetResource("PropertyDoesNotExist", "Property doesn't exist on the provided type");
             }
         }
 
@@ -154,7 +154,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string FieldDoesNotExist {
             get {
-                return "Field doesn't exist on provided type";
+                return ResourceManager.Default.GetResource("FieldDoesNotExist", "Field doesn't exist on provided type");
             }
         }
 
@@ -163,7 +163,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string TypeDoesNotHaveConstructorForTheSignature {
             get {
-                return "Type doesn't have constructor with a given signature";
+                return ResourceManager.Default.GetResource("TypeDoesNotHaveConstructorForTheSignature", "Type doesn't have constructor with a given signature");
             }
         }
 
@@ -172,7 +172,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string TypeDoesNotHaveMethodForName {
             get {
-                return "Type doesn't have a method with a given name.";
+                return ResourceManager.Default.GetResource("TypeDoesNotHaveMethodForName", "Type doesn't have a method with a given name.");
             }
         }
 
@@ -181,7 +181,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string TypeDoesNotHaveMethodForNameSignature {
             get {
-                return "Type doesn't have a method with a given name and signature.";
+                return ResourceManager.Default.GetResource("TypeDoesNotHaveMethodForNameSignature", "Type doesn't have a method with a given name and signature.");
             }
         }
 
@@ -190,7 +190,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string CountCannotBeNegative {
             get {
-                return "Count must be non-negative.";
+                return ResourceManager.Default.GetResource("CountCannotBeNegative", "Count must be non-negative.");
             }
         }
 
@@ -199,7 +199,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string ArrayTypeMustBeArray {
             get {
-                return "arrayType must be an array type";
+                return ResourceManager.Default.GetResource("ArrayTypeMustBeArray", "arrayType must be an array type");
             }
         }
 
@@ -208,7 +208,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MustHaveCodeOrTarget {
             get {
-                return "Either code or target must be specified.";
+                return ResourceManager.Default.GetResource("MustHaveCodeOrTarget", "Either code or target must be specified.");
             }
         }
 
@@ -216,21 +216,21 @@ namespace Microsoft.Scripting {
         /// A string like  "Type parameter is {0}. Expected a delegate."
         /// </summary>
         internal static string TypeParameterIsNotDelegate(object p0) {
-            return FormatString("Type parameter is {0}. Expected a delegate.", p0);
+            return FormatString(ResourceManager.Default.GetResource("TypeParameterIsNotDelegate", "Type parameter is {0}. Expected a delegate."), p0);
         }
 
         /// <summary>
         /// A string like  "Cannot cast from type '{0}' to type '{1}"
         /// </summary>
         internal static string InvalidCast(object p0, object p1) {
-            return FormatString("Cannot cast from type '{0}' to type '{1}", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("InvalidCast", "Cannot cast from type '{0}' to type '{1}"), p0, p1);
         }
 
         /// <summary>
         /// A string like  "unknown member type: '{0}'. "
         /// </summary>
         internal static string UnknownMemberType(object p0) {
-            return FormatString("unknown member type: '{0}'. ", p0);
+            return FormatString(ResourceManager.Default.GetResource("UnknownMemberType", "unknown member type: '{0}'. "), p0);
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string FirstArgumentMustBeCallSite {
             get {
-                return "RuleBuilder can only be used with delegates whose first argument is CallSite.";
+                return ResourceManager.Default.GetResource("FirstArgumentMustBeCallSite", "RuleBuilder can only be used with delegates whose first argument is CallSite.");
             }
         }
 
@@ -247,7 +247,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string NoInstanceForCall {
             get {
-                return "no instance for call.";
+                return ResourceManager.Default.GetResource("NoInstanceForCall", "no instance for call.");
             }
         }
 
@@ -256,7 +256,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MissingTest {
             get {
-                return "Missing Test.";
+                return ResourceManager.Default.GetResource("MissingTest", "Missing Test.");
             }
         }
 
@@ -265,7 +265,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MissingTarget {
             get {
-                return "Missing Target.";
+                return ResourceManager.Default.GetResource("MissingTarget", "Missing Target.");
             }
         }
 
@@ -273,14 +273,14 @@ namespace Microsoft.Scripting {
         /// A string like  "The operation requires a non-generic type for {0}, but this represents generic types only"
         /// </summary>
         internal static string NonGenericWithGenericGroup(object p0) {
-            return FormatString("The operation requires a non-generic type for {0}, but this represents generic types only", p0);
+            return FormatString(ResourceManager.Default.GetResource("NonGenericWithGenericGroup", "The operation requires a non-generic type for {0}, but this represents generic types only"), p0);
         }
 
         /// <summary>
         /// A string like  "Invalid operation: '{0}'"
         /// </summary>
         internal static string InvalidOperation(object p0) {
-            return FormatString("Invalid operation: '{0}'", p0);
+            return FormatString(ResourceManager.Default.GetResource("InvalidOperation", "Invalid operation: '{0}'"), p0);
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string FinallyAlreadyDefined {
             get {
-                return "Finally already defined.";
+                return ResourceManager.Default.GetResource("FinallyAlreadyDefined", "Finally already defined.");
             }
         }
 
@@ -297,7 +297,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string CannotHaveFaultAndFinally {
             get {
-                return "Can not have fault and finally.";
+                return ResourceManager.Default.GetResource("CannotHaveFaultAndFinally", "Can not have fault and finally.");
             }
         }
 
@@ -306,7 +306,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string FaultAlreadyDefined {
             get {
-                return "Fault already defined.";
+                return ResourceManager.Default.GetResource("Fault already defined.");
             }
         }
 
@@ -314,21 +314,21 @@ namespace Microsoft.Scripting {
         /// A string like  "Cannot create default value for type {0}."
         /// </summary>
         internal static string CantCreateDefaultTypeFor(object p0) {
-            return FormatString("Cannot create default value for type {0}.", p0);
+            return FormatString(ResourceManager.Default.GetResource("CantCreateDefaultTypeFor", "Cannot create default value for type {0}."), p0);
         }
 
         /// <summary>
         /// A string like  "Unhandled convert: {0}"
         /// </summary>
         internal static string UnhandledConvert(object p0) {
-            return FormatString("Unhandled convert: {0}", p0);
+            return FormatString(ResourceManager.Default.GetResource("UnhandledConvert", "Unhandled convert: {0}"), p0);
         }
 
         /// <summary>
         /// A string like  "{0}.{1} has no publiclly visible method."
         /// </summary>
         internal static string NoCallableMethods(object p0, object p1) {
-            return FormatString("{0}.{1} has no publiclly visible method.", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("NoCallableMethods", "{0}.{1} has no publiclly visible method."), p0, p1);
         }
 
         /// <summary>
@@ -336,7 +336,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string GlobalsMustBeUnique {
             get {
-                return "Global/top-level local variable names must be unique.";
+                return ResourceManager.Default.GetResource("GlobalsMustBeUnique", "Global/top-level local variable names must be unique.");
             }
         }
 
@@ -345,7 +345,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string GenNonSerializableBinder {
             get {
-                return "Generating code from non-serializable CallSiteBinder.";
+                return ResourceManager.Default.GetResource("GenNonSerializableBinder", "Generating code from non-serializable CallSiteBinder.");
             }
         }
 
@@ -354,7 +354,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string InvalidPath {
             get {
-                return "Specified path is invalid.";
+                return ResourceManager.Default.GetResource("InvalidPath", "Specified path is invalid.");
             }
         }
 
@@ -363,7 +363,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string DictionaryNotHashable {
             get {
-                return "Dictionaries are not hashable.";
+                return ResourceManager.Default.GetResource("DictionaryNotHashable", "Dictionaries are not hashable.");
             }
         }
 
@@ -372,7 +372,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string LanguageRegistered {
             get {
-                return "language already registered.";
+                return ResourceManager.Default.GetResource("LanguageRegistered", "language already registered.");
             }
         }
 
@@ -381,7 +381,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MethodOrOperatorNotImplemented {
             get {
-                return "The method or operation is not implemented.";
+                return ResourceManager.Default.GetResource("MethodOrOperatorNotImplemented", "The method or operation is not implemented.");
             }
         }
 
@@ -390,7 +390,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string NoException {
             get {
-                return "No exception.";
+                return ResourceManager.Default.GetResource("NoException", "No exception.");
             }
         }
 
@@ -398,7 +398,7 @@ namespace Microsoft.Scripting {
         /// A string like  "Extension type {0} must be public."
         /// </summary>
         internal static string ExtensionMustBePublic(object p0) {
-            return FormatString("Extension type {0} must be public.", p0);
+            return FormatString(ResourceManager.Default.GetResource("ExtensionMustBePublic", "Extension type {0} must be public."), p0);
         }
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string AlreadyInitialized {
             get {
-                return "Already initialized.";
+                return ResourceManager.Default.GetResource("AlreadyInitialized", "Already initialized.");
             }
         }
 
@@ -415,7 +415,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string MustReturnScopeExtension {
             get {
-                return "CreateScopeExtension must return a scope extension.";
+                return ResourceManager.Default.GetResource("MustReturnScopeExtension", "CreateScopeExtension must return a scope extension.");
             }
         }
 
@@ -424,7 +424,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string InvalidParamNumForService {
             get {
-                return "Invalid number of parameters for the service.";
+                return ResourceManager.Default.GetResource("InvalidParamNumForService", "Invalid number of parameters for the service.");
             }
         }
 
@@ -432,7 +432,7 @@ namespace Microsoft.Scripting {
         /// A string like  "Invalid type of argument {0}; expecting {1}."
         /// </summary>
         internal static string InvalidArgumentType(object p0, object p1) {
-            return FormatString("Invalid type of argument {0}; expecting {1}.", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("InvalidArgumentType", "Invalid type of argument {0}; expecting {1}."), p0, p1);
         }
 
         /// <summary>
@@ -440,7 +440,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string CannotChangeNonCachingValue {
             get {
-                return "Cannot change non-caching value.";
+                return ResourceManager.Default.GetResource("CannotChangeNonCachingValue", "Cannot change non-caching value.");
             }
         }
 
@@ -448,42 +448,42 @@ namespace Microsoft.Scripting {
         /// A string like  "Field {0} is read-only"
         /// </summary>
         internal static string FieldReadonly(object p0) {
-            return FormatString("Field {0} is read-only", p0);
+            return FormatString(ResourceManager.Default.GetResource("FieldReadonly", "Field {0} is read-only"), p0);
         }
 
         /// <summary>
         /// A string like  "Property {0} is read-only"
         /// </summary>
         internal static string PropertyReadonly(object p0) {
-            return FormatString("Property {0} is read-only", p0);
+            return FormatString(ResourceManager.Default.GetResource("PropertyReadonly", "Property {0} is read-only"), p0);
         }
 
         /// <summary>
         /// A string like  "Expected event from {0}.{1}, got event from {2}.{3}."
         /// </summary>
         internal static string UnexpectedEvent(object p0, object p1, object p2, object p3) {
-            return FormatString("Expected event from {0}.{1}, got event from {2}.{3}.", p0, p1, p2, p3);
+            return FormatString(ResourceManager.Default.GetResource("UnexpectedEvent", "Expected event from {0}.{1}, got event from {2}.{3}."), p0, p1, p2, p3);
         }
 
         /// <summary>
         /// A string like  "expected bound event, got {0}."
         /// </summary>
         internal static string ExpectedBoundEvent(object p0) {
-            return FormatString("expected bound event, got {0}.", p0);
+            return FormatString(ResourceManager.Default.GetResource("ExpectedBoundEvent", "expected bound event, got {0}."), p0);
         }
 
         /// <summary>
         /// A string like  "Expected type {0}, got {1}."
         /// </summary>
         internal static string UnexpectedType(object p0, object p1) {
-            return FormatString("Expected type {0}, got {1}.", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("UnexpectedType", "Expected type {0}, got {1}."), p0, p1);
         }
 
         /// <summary>
         /// A string like  "can only write to member {0}."
         /// </summary>
         internal static string MemberWriteOnly(object p0) {
-            return FormatString("can only write to member {0}.", p0);
+            return FormatString(ResourceManager.Default.GetResource("MemberWriteOnly", "can only write to member {0}."), p0);
         }
 
         /// <summary>
@@ -491,7 +491,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string NoCodeToCompile {
             get {
-                return "No code to compile.";
+                return ResourceManager.Default.GetResource("NoCodeToCompile", "No code to compile.");
             }
         }
 
@@ -499,7 +499,7 @@ namespace Microsoft.Scripting {
         /// A string like  "Invalid stream type: {0}."
         /// </summary>
         internal static string InvalidStreamType(object p0) {
-            return FormatString("Invalid stream type: {0}.", p0);
+            return FormatString(ResourceManager.Default.GetResource("InvalidStreamType", "Invalid stream type: {0}."), p0);
         }
 
         /// <summary>
@@ -507,7 +507,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string QueueEmpty {
             get {
-                return "Queue empty.";
+                return ResourceManager.Default.GetResource("QueueEmpty", "Queue empty.");
             }
         }
 
@@ -516,7 +516,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string EnumerationNotStarted {
             get {
-                return "Enumeration has not started. Call MoveNext.";
+                return ResourceManager.Default.GetResource("EnumerationNotStarted", "Enumeration has not started. Call MoveNext.");
             }
         }
 
@@ -525,7 +525,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string EnumerationFinished {
             get {
-                return "Enumeration already finished.";
+                return ResourceManager.Default.GetResource("EnumerationFinished", "Enumeration already finished.");
             }
         }
 
@@ -533,21 +533,21 @@ namespace Microsoft.Scripting {
         /// A string like  "can't add another casing for identifier {0}"
         /// </summary>
         internal static string CantAddCasing(object p0) {
-            return FormatString("can't add another casing for identifier {0}", p0);
+            return FormatString(ResourceManager.Default.GetResource("CantAddCasing", "can't add another casing for identifier {0}"), p0);
         }
 
         /// <summary>
         /// A string like  "can't add new identifier {0}"
         /// </summary>
         internal static string CantAddIdentifier(object p0) {
-            return FormatString("can't add new identifier {0}", p0);
+            return FormatString(ResourceManager.Default.GetResource("CantAddIdentifier", "can't add new identifier {0}"), p0);
         }
 
         /// <summary>
         /// A string like  "Type '{0}' doesn't provide a suitable public constructor or its implementation is faulty: {1}"
         /// </summary>
         internal static string InvalidCtorImplementation(object p0, object p1) {
-            return FormatString("Type '{0}' doesn't provide a suitable public constructor or its implementation is faulty: {1}", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("InvalidCtorImplementation", "Type '{0}' doesn't provide a suitable public constructor or its implementation is faulty: {1}"), p0, p1);
         }
 
         /// <summary>
@@ -555,7 +555,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string InvalidOutputDir {
             get {
-                return "Invalid output directory.";
+                return ResourceManager.Default.GetResource("InvalidOutputDir", "Invalid output directory.");
             }
         }
 
@@ -564,7 +564,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string InvalidAsmNameOrExtension {
             get {
-                return "Invalid assembly name or file extension.";
+                return ResourceManager.Default.GetResource("InvalidAsmNameOrExtension", "Invalid assembly name or file extension.");
             }
         }
 
@@ -572,28 +572,28 @@ namespace Microsoft.Scripting {
         /// A string like  "Cannot emit constant {0} ({1})"
         /// </summary>
         internal static string CanotEmitConstant(object p0, object p1) {
-            return FormatString("Cannot emit constant {0} ({1})", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("CanotEmitConstant", "Cannot emit constant {0} ({1})"), p0, p1);
         }
 
         /// <summary>
         /// A string like  "No implicit cast from {0} to {1}"
         /// </summary>
         internal static string NoImplicitCast(object p0, object p1) {
-            return FormatString("No implicit cast from {0} to {1}", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("NoImplicitCast", "No implicit cast from {0} to {1}"), p0, p1);
         }
 
         /// <summary>
         /// A string like  "No explicit cast from {0} to {1}"
         /// </summary>
         internal static string NoExplicitCast(object p0, object p1) {
-            return FormatString("No explicit cast from {0} to {1}", p0, p1);
+            return FormatString(ResourceManager.Default.GetResource("NoExplicitCast", "No explicit cast from {0} to {1}"), p0, p1);
         }
 
         /// <summary>
         /// A string like  "name '{0}' not defined"
         /// </summary>
         internal static string NameNotDefined(object p0) {
-            return FormatString("name '{0}' not defined", p0);
+            return FormatString(ResourceManager.Default.GetResource("NameNotDefined", "name '{0}' not defined"), p0);
         }
 
         /// <summary>
@@ -601,7 +601,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string NoDefaultValue {
             get {
-                return "No default value for a given type.";
+                return ResourceManager.Default.GetResource("NoDefaultValue", "No default value for a given type.");
             }
         }
 
@@ -610,7 +610,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string UnknownLanguageProviderType {
             get {
-                return "Specified language provider type is not registered.";
+                return ResourceManager.Default.GetResource("UnknownLanguageProviderType", "Specified language provider type is not registered.");
             }
         }
 
@@ -619,7 +619,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string CantReadProperty {
             get {
-                return "can't read from property";
+                return ResourceManager.Default.GetResource("CantReadProperty", "can't read from property");
             }
         }
 
@@ -628,7 +628,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string CantWriteProperty {
             get {
-                return "can't write to property";
+                return ResourceManager.Default.GetResource("CantWriteProperty", "can't write to property");
             }
         }
 
@@ -636,14 +636,14 @@ namespace Microsoft.Scripting {
         /// A string like  "Cannot create instance of {0} because it contains generic parameters"
         /// </summary>
         internal static string IllegalNew_GenericParams(object p0) {
-            return FormatString("Cannot create instance of {0} because it contains generic parameters", p0);
+            return FormatString(ResourceManager.Default.GetResource("IllegalNew_GenericParams", "Cannot create instance of {0} because it contains generic parameters"), p0);
         }
 
         /// <summary>
         /// A string like  "Non-verifiable assembly generated: {0}:\nAssembly preserved as {1}\nError text:\n{2}\n"
         /// </summary>
         internal static string VerificationException(object p0, object p1, object p2) {
-            return FormatString("Non-verifiable assembly generated: {0}:\nAssembly preserved as {1}\nError text:\n{2}\n", p0, p1, p2);
+            return FormatString(ResourceManager.Default.GetResource("VerificationException", "Non-verifiable assembly generated: {0}:\nAssembly preserved as {1}\nError text:\n{2}\n"), p0, p1, p2);
         }
 
     }
