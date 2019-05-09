@@ -109,7 +109,7 @@ namespace Microsoft.Scripting {
         }
 
         private string GetCultureInfo(CultureInfo cultureInfo) {
-            return cultureInfo.Parent.NativeName;
+            return cultureInfo.Name;
         }
 
         private CultureInfo GetDefaultCulture() {
