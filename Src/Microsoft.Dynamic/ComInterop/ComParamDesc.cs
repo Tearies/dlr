@@ -113,7 +113,7 @@ namespace Microsoft.Scripting.ComInterop {
                 case VarEnum.VT_EMPTY:
                 case VarEnum.VT_NULL:
                 case VarEnum.VT_RECORD:
-                    throw new InvalidOperationException(string.Format("Unexpected VarEnum {0}.", vt));
+                    throw new InvalidOperationException(string.Format(ResourceManager.Default.GetResource("unexpectedvarenum0", "Unexpected VarEnum {0}."), vt));
 
                 // VarEnums which are not used in VARIANTs, but which can occur in a TYPEDESC
                 case VarEnum.VT_VOID:

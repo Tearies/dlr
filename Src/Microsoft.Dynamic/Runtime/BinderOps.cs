@@ -215,7 +215,7 @@ namespace Microsoft.Scripting.Runtime {
         public static void SetEvent(EventTracker eventTracker, object value) {
             if (value is EventTracker et) {
                 if (et != eventTracker) {
-                    throw new ArgumentException(String.Format("expected event from {0}.{1}, got event from {2}.{3}",
+                    throw new ArgumentException(String.Format(ResourceManager.Default.GetResource("expectedeventfrom01goteventfrom23", "expected event from {0}.{1}, got event from {2}.{3}"),
                                                 eventTracker.DeclaringType.Name,
                                                 eventTracker.Name,
                                                 et.DeclaringType.Name,

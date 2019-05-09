@@ -85,7 +85,7 @@ namespace Microsoft.Scripting.Generation {
                 fullName = fullName.Substring(0, 100);
             }
 
-            string filename = String.Format("{0}_{1}.il", IOUtils.ToValidFileName(fullName), Interlocked.Increment(ref _methodNameIndex));
+            string filename = String.Format(ResourceManager.Default.GetResource("01il", "{0}_{1}.il"), IOUtils.ToValidFileName(fullName), Interlocked.Increment(ref _methodNameIndex));
 
             string dir = _snippetsDirectory ?? Path.Combine(Path.GetTempPath(), "__DLRIL");
             Directory.CreateDirectory(dir);

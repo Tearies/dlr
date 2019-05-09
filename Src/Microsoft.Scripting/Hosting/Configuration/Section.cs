@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the Apache 2.0 License.
 // See the LICENSE file in the project root for more information.
 
@@ -160,7 +160,7 @@ namespace Microsoft.Scripting.Hosting.Configuration {
                         }
                     }
                     if (!found) {
-                        throw new ConfigurationErrorsException(string.Format("Unknown language name: '{0}'", option.Language));
+                        throw new ConfigurationErrorsException(string.Format(ResourceManager.Default.GetResource("unknownlanguagename0", "Unknown language name: '{0}'"), option.Language));
                     }
                 }
             }

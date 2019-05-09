@@ -412,7 +412,7 @@ namespace Microsoft.Scripting.Hosting.Shell {
         private void PrintUsage()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("Usage: {0}.exe ", ExeName);
+            sb.AppendFormat(ResourceManager.Default.GetResource("usage0exe", "Usage: {0}.exe "), ExeName);
             PrintLanguageHelp(sb);
             Console.Write(sb.ToString());
         }
