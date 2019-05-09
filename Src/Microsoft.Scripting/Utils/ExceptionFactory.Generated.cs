@@ -306,7 +306,7 @@ namespace Microsoft.Scripting {
         /// </summary>
         internal static string FaultAlreadyDefined {
             get {
-                return ResourceManager.Default.GetResource("Fault already defined.");
+                return ResourceManager.Default.GetResource("FaultAlreadyDefined","Fault already defined.");
             }
         }
 
