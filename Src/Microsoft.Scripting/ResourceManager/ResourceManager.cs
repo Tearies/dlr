@@ -101,7 +101,9 @@ namespace Microsoft.Scripting {
             if (!Directory.Exists(resourcedir)) Directory.CreateDirectory(resourcedir);
             using (var fs = File.Open(resource, FileMode.OpenOrCreate, FileAccess.ReadWrite)) {
                 try {
-                    defaultSerializer.WriteObject(fs, language);
+                   var jsonWriter= JsonReaderWriterFactory.CreateJsonWriter(fs, Encoding.UTF8, false, true);
+                    defaultSerializer.WriteObject(jsonWriter, language);
+                    jsonWriter.Flush();
                 } catch (Exception e) {
                     var ss = e;
                 }
