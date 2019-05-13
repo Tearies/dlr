@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 
 namespace Microsoft.Scripting {
@@ -129,7 +130,8 @@ namespace Microsoft.Scripting {
             LanguagePack resourcedic = null;
             using (var fs = File.OpenRead(resource)) {
                 try {
-                    resourcedic = defaultSerializer.ReadObject(fs) as LanguagePack;
+                    var reader = JsonReaderWriterFactory.CreateJsonReader(fs, XmlDictionaryReaderQuotas.Max);
+                    resourcedic = defaultSerializer.ReadObject(reader) as LanguagePack;
                 } catch {
                     resourcedic = null;
                 }
